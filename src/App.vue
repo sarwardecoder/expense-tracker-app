@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import TransactionForm from './components/TransactionForm.vue';
+import AddTransactions from './components/AddTransactions.vue';
 import TransactionList from './components/TransactionList.vue';
 
 const transactions = ref([]);
@@ -45,7 +45,7 @@ const filteredTransactions = computed(() => {
 
 
     <!-- Add Transaction -->
-    <TransactionForm @addTransaction="addTransaction" />
+    <AddTransactions @addTransaction="addTransaction" />
 
     <!-- Filter -->
     <div class="mb-3">

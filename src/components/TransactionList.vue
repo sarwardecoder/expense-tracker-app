@@ -22,11 +22,15 @@ const deleteTransaction = (id) => {
       </tr>
     </thead>
     <tbody>
+      
       <tr v-for="transaction in transactions" :key="transaction.id">
         <td>{{ transaction.title }}</td>
 
-       
-        <td :class="transaction.type === 'EXPENSE' ? 'text-danger' : 'text-success'">
+        <td v-bind:class="{
+  'text-danger': transaction.type === 'EXPENSE',
+  'text-danger, fw-bolder': transaction.type === 'EXPENSE' && transaction.amount > 499, 
+  'text-success': transaction.type === 'INCOME'
+}">
           ${{ transaction.amount }}
         </td>
         <td>{{ transaction.type }}</td>

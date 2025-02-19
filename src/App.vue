@@ -40,7 +40,7 @@ const filteredTransactions = computed(() => {
 </script>
 
 <template>
-  <div class="container mt-10 p-4">
+  <div class="container mt-10 p-4 ">
     <h2 style="text-align: center;" class="h1 mb-5">Income & Expense Tracker</h2>
 
 

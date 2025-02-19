@@ -62,6 +62,7 @@ const filteredTransactions = computed(() => {
 
     
     </div>
+   
 
     <!-- Display Transactions -->
     <TransactionList :transactions="filteredTransactions" @deleteTransaction="deleteTransaction" />

@@ -22,6 +22,9 @@ const deleteTransaction = (id) => {
       </tr>
     </thead>
     <tbody>
+      <tr v-if="transactions.length === 0">
+        <td colspan="4" class="text-center">No transactions recorded yet.</td>
+      </tr>
       
       <tr v-for="transaction in transactions" :key="transaction.id">
         <td>{{ transaction.title }}</td>
